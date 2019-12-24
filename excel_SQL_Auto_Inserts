@@ -1,1 +1,1 @@
-xyz
+"insert into resmgr."&$B$36&" values ('"&E42&"','"&E36&"', '"&E43&"', '"&E40&"', "&E44&", "&E37&", "&E41&", "&E45&",'"&TEXT(E39,"YYYY-MM-DD")&"', '"&TEXT(E38,"YYYY-MM-DD")&"');"

@@ -1,0 +1,54 @@
+insert into resmgr.srvc values ('lcar', 'calculation','n', 1, 4, 8, '2019-11-01', '2999-12-31','null', 'null');
+insert into resmgr.srvc_templ_xref values ('lcar','lcar_input', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.srvc_rsrc_grp_xref values ('lcar', 'lcar', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.srvc_rsrc_xref values ('lcar_input_postgres', 'lcar', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.srvc_rsrc_xref values ('lcar_output_postgres', 'lcar', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.rsrc values ('lcar_input_postgres','active', 'lcar service input resource', 1, 'system','2019-11-01', '2999-12-31', 'input',  'null');
+insert into resmgr.rsrc values ('lcar_output_postgres','active', 'lcar service output resource', 1, 'system','2019-11-01', '2999-12-31', 'output',  'null');
+insert into resmgr.templ values ('lcar_input', 'defines lcar service input', 'active', 1,'2019-11-01', '2999-12-31', 'n');
+insert into resmgr.templ values ('lcar_output', 'defines lcar service output', 'active', 1,'2019-11-01', '2999-12-31', 'n');
+insert into resmgr.rsrc_templ_xref values ('lcar_input', 'lcar_input_postgres',1,1, 'table','2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_templ_xref values ('lcar_output', 'lcar_output_postgres',1,1, 'table','2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_templ_atrib values ('lcar_input', 'lcar_input_postgres', 1, 1, 'agmt_id', 'lcar_srvc_inp', 1, null, null, null, 1,'2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_output', 'lcar_output_postgres', 1, 1, 'agmt_id', 'lcar_srvc_outp', 1, null, null, null, 1, '2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_input', 'lcar_input_postgres', 1, 1, 'shard_id', 'lcar_srvc_inp', 5, null, null, null, 1,'2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_output', 'lcar_output_postgres', 1, 1, 'shard_id', 'lcar_srvc_outp', 3, null, null, null, 1, '2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_input', 'lcar_input_postgres', 1, 1, 'acct_type_cd', 'lcar_srvc_inp', 2, null, null, null, 1,'2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_input', 'lcar_input_postgres', 1, 1, 'lndg_cmtmt_type_cd', 'lcar_srvc_inp', 3, null, null, null, 1,'2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_output', 'lcar_output_postgres', 1, 1, 'cmtmt_agmt_id', 'lcar_srvc_outp', 2, null, null, null, 1, '2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_atrib values ('lcar_input', 'lcar_input_postgres', 1, 1, 'dervd_lendg_cmtmt_type_cd', 'lcar_srvc_inp', 4, null, null, null, 1,'2999-12-31', '2019-11-01');
+insert into resmgr.rsrc_templ_ent values ('lcar_input', 'lcar_input_postgres', 1, 1, 'lcar_srvc_inp', 0, null, null,'lcar_srvc_afs_cre_std_inp', 1,'2019-11-01', '2999-12-31', 'null');
+insert into resmgr.rsrc_templ_ent values ('lcar_output', 'lcar_output_postgres', 1, 1, 'lcar_srvc_outp', 0, null, null,'lcar_srvc_afs_cre_std_outp', 1,'2019-11-01', '2999-12-31', 'null');
+insert into resmgr.rsrc_grp values ('lcar', 'lcar resource group', 'active', 1, '2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_grp values ('afs_cre_std', 'afs cre standard resource Group', 'active', 1, '2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_grp_rsrc_xref values ('lcar', 'lcar_input_postgres', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_grp_rsrc_xref values ('lcar', 'lcar_output_postgres', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.templ_ent_xref values ('lcar_input', 'lcar_srvc_inp', 1, 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.templ_ent_xref values ('lcar_output', 'lcar_srvc_outp', 1, 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('agmt_id', 'lcar_srvc_inp', 'n', 'string', 256, 0, 'y', 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('shard_id', 'lcar_srvc_inp', 'n', 'numeric', 10, 0, 'y', 5, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('acct_type_cd', 'lcar_srvc_inp', 'n', 'string', 50, 0, 'y', 2, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('lndg_cmtmt_type_cd', 'lcar_srvc_inp', 'n', 'string', 50, 0, 'n', 3, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('dervd_lendg_cmtmt_type_cd', 'lcar_srvc_inp', 'n', 'string', 50, 0, 'n', 4, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('agmt_id', 'lcar_srvc_outp', 'n', 'string', 256, 0, 'y', 1, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('shard_id', 'lcar_srvc_outp', 'n', 'numeric', 10, 0, 'y', 3, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('cmtmt_agmt_id', 'lcar_srvc_outp', 'n', 'string', 256, 0, 'y', 2, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.atrib values ('tag_id', 'lcar_srvc_outp', 'n', 'numeric', 10, 0, 'y', 4, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_grp_rltd values ('afs_cre_std', 'lcar', 1, 1, 'null', '2019-11-01', '2999-12-31');
+insert into resmgr.pltf values ('database', 'lcar', 1, '2019-11-01', '2999-12-31','postgres', 'postgres','crendb_lcar ', 'null','null', 'null',null, '1' );
+insert into resmgr.pltf_type values ('database', 'null','2019-11-01', '2999-12-31');
+insert into resmgr.pltf_cnct values ('service_account', 'null', 'lcar', 1, 'afs_cre_std', 1, 'database','2019-11-01', '2999-12-31', null,null,'srvc_lcar',null,null);
+insert into resmgr.rsrc_accs_allwnc values ('service_account', 'use', 'lcar_input_postgres', 1,'2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_accs_allwnc values ('service_account', 'use', 'lcar_output_postgres', 1,'2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_accs_allwnc values ('rm_admin', 'alter', 'lcar_input_postgres', 1,'2019-11-01', '2999-12-31');
+insert into resmgr.rsrc_accs_allwnc values ('rm_admin', 'alter', 'lcar_output_postgres', 1,'2019-11-01', '2999-12-31');
+insert into resmgr.ent values ('lcar_srvc_inp', 0, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.ent values ('lcar_srvc_outp', 64, 1, '2019-11-01', '2999-12-31');
+insert into resmgr.ent_key values ('primary', 'lcar_srvc_inp_pk', 'lcar_srvc_inp', 'y', 'y', 1, '2019-11-01', '2999-12-31');
+insert into resmgr.ent_key values ('primary', 'lcar_srvc_outp_pk', 'lcar_srvc_outp', 'y', 'y', 1, '2019-11-01', '2999-12-31');
+insert into resmgr.ent_key_atrib values ('lcar_srvc_inp_pk','agmt_id', 'null', 'lcar_srvc_inp', null, 1, 1, 1,'2019-11-01', '2999-12-31');
+insert into resmgr.ent_key_atrib values ('lcar_srvc_outp_pk','agmt_id', 'null', 'lcar_srvc_afs_outp', null, 1, 1, 1,'2019-11-01', '2999-12-31');
+
+
+
+

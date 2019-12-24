@@ -1,0 +1,1 @@
+="insert into resmgr."&$B$27&" values ('"&E32&"', '"&E31&"', '"&E29&"', '"&E33&"', '"&E34&"', "&E30&", '"&TEXT(E28,"YYYY-MM-DD")&"', '"&TEXT(E27,"YYYY-MM-DD")&"');"
